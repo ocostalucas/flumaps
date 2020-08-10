@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_maps/app/screens/home/home_screen.dart';
+import 'package:flutter_maps/app/screens/home_screen.dart';
 
 class AppWidget extends StatelessWidget {
   @override
