@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_maps/app/screens/home_screen.dart';
+import 'package:flutter_maps/app/screens/map/map_screen.dart';
 
 class AppWidget extends StatelessWidget {
   @override
@@ -10,7 +10,7 @@ class AppWidget extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: MapScreen(),
     );
   }
 }
