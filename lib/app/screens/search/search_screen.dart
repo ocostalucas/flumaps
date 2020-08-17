@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_maps/app/screens/search/search_screen.dart';
 
-class SearchWidget extends StatelessWidget {
+class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Padding(
+    return Scaffold(
+      body: Column(
+        children: [
+          Padding(
             padding: const EdgeInsets.only(top: 30.0, left: 8.0, right: 8.0),
             child: Container(
               height: 50.0,
@@ -23,34 +23,26 @@ class SearchWidget extends StatelessWidget {
                 ],
               ),
               child: TextField(
-                cursorColor: Colors.black,
-                decoration: InputDecoration(
+                  cursorColor: Colors.black,
+                  decoration: InputDecoration(
                     hintText: 'Pesquise aqui',
                     border: InputBorder.none,
                     contentPadding: EdgeInsets.only(left: 15.0, top: 15.0),
                     prefixIcon: IconButton(
                       icon: Icon(
-                        Icons.dehaze,
+                        Icons.arrow_back,
                         color: Colors.black,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                       iconSize: 25.0,
                     ),
-                    suffixIcon: IconButton(
-                      icon: Icon(
-                        Icons.directions,
-                        color: Colors.black,
-                      ),
-                      onPressed: () {},
-                      iconSize: 25.0,
-                    )),
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SearchScreen()));
-                },
-              ),
-            )),
-      ],
+                  )),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
