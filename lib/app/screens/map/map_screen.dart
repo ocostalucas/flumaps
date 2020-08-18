@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_maps/app/screens/map/components/map_widget.dart';
-import 'package:flutter_maps/app/screens/map/components/search_widget.dart';
 import 'components/centralize_button.dart';
 import 'map_controller.dart';
 
@@ -13,7 +12,6 @@ class MapScreen extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           MapWidget(_mapController),
-          SearchWidget(),
           CentralizeButton(_mapController)
         ],
       ),
